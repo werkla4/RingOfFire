@@ -1,0 +1,19 @@
+.player-container{
+    display: flex;
+    align-items: center;
+    z-index: 1;    
+    background-color: rgb(245, 122, 77);
+    width: 300px;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+
+    span{
+        font-size: 30px;
+    }
+
+    img{
+        height: 80px;
+        width: auto;
+        margin: 10px;
+    }
+}

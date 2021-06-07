@@ -1,7 +1,7 @@
 export class Game {
-    public players: string[] = [];
+    public players: string[] = ['Klaus', 'Werner', 'SMMrd'];
     public stack: string[] = [];
-    public playedCard: string[] = [];
+    public playedCards: string[] = [];
     public currentPlayer: number = 0;
 
     constructor() {
@@ -11,24 +11,24 @@ export class Game {
             this.stack.push('diamonds_' + i);
             this.stack.push('hearts_' + i);
         }
-        this.shuffle(this.stack);
+        shuffle(this.stack);
     }
-
-    shuffle(array: string[]) {
-        var currentIndex = array.length,  randomIndex;
-      
-        // While there remain elements to shuffle...
-        while (0 !== currentIndex) {
-      
-          // Pick a remaining element...
-          randomIndex = Math.floor(Math.random() * currentIndex);
-          currentIndex--;
-      
-          // And swap it with the current element.
-          [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-        }
-      
-        return array;
-      }
 }
+
+function shuffle(array: string[]) {
+    var currentIndex = array.length, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+  
+    return array;
+  }
