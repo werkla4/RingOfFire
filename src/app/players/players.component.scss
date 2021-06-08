@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     z-index: 1;    
-    background-color: rgb(245, 122, 77);
+    background-color: rgba(81, 72, 68, 0.5);
     width: 300px;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
@@ -16,4 +16,8 @@
         width: auto;
         margin: 10px;
     }
+}
+
+.player-active{
+    background-color: rgb(245, 122, 77, 0.7) !important;
 }
