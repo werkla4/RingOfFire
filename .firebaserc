@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ring-of-fire-f5066": {
+      "hosting": {
+        "ringoffire": [
+          "ring-of-fire-f5066"
+        ]
+      }
+    }
+  }
+}
