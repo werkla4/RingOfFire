@@ -11,7 +11,6 @@ export const environment = {
     storageBucket: "ring-of-fire-f5066.appspot.com",
     messagingSenderId: "985619136649",
     appId: "1:985619136649:web:0cdc4202ee1d144fa44658"
-
   }
 };
 
