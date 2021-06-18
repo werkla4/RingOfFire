@@ -17,6 +17,8 @@ import { GameInfoComponent } from './game-info/game-info.component';
 import { MatCardModule } from '@angular/material/card';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { CustomizePlayerComponent } from './customize-player/customize-player.component';
+import { PlayersOnTopComponent } from './players-on-top/players-on-top.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { environment } from '../environments/environment';
     GameComponent,
     PlayersComponent,
     AddPlayerDialogComponent,
-    GameInfoComponent
+    GameInfoComponent,
+    CustomizePlayerComponent,
+    PlayersOnTopComponent
   ],
   imports: [
     BrowserModule,

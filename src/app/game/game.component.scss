@@ -1,3 +1,14 @@
+.all-player-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-height: 85%;
+    width: 320px;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 1;
+}
+
 .field {
     width: 100vw;
     max-width: 100%;
@@ -7,6 +18,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.blur3 {
+    filter: blur(3px);
+}
+
+.game-over {
+    z-index: -999999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 0;
+        max-height: 0;
+        transition: all 1000ms ease-in-out;
+    }
+}
+
+.game-over-show {
+    z-index: 2;
+
+    img {
+        max-width: 80%;
+        max-height: 80%;
+    }
 }
 
 .card-stack {
@@ -29,44 +74,108 @@
 
 .played-card {
     right: 25px;
-    transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);   
+    transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);
+
+    @media (max-width: 1000px) {
+        right: 25px !important;
+        transform: scale(1) translateX(110px) translateY(-280px) rotate(-20deg) !important;
+    }
 }
 
 .pick-card {
     animation: pick-card-animation 1s ease-in-out;
-    transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);   
+    transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);
+
+    @media (max-width: 1000px) {
+        animation: pick-card-animation-mobile 1s ease-in-out !important;
+        transform: scale(1) translateX(110px) translateY(-280px) rotate(-20deg) !important;
+    }
 }
 
-.player-position{
+.player-position {
     position: absolute;
     right: 0;
     z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
 }
 
-.btn-add{
+.preload-image {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.btn-add {
     position: absolute;
     right: 32px;
     bottom: 32px;
 }
 
 @keyframes pick-card-animation {
-    0%{
-        transform: scale(1.1);        
+    0% {
+        transform: scale(1.1);
     }
-    40%{
-        transform: scale(1.7);   
+    40% {
+        transform: scale(1.7);
     }
-    60%{
-        transform: scale(1.7);   
+    60% {
+        transform: scale(1.7);
     }
-    100%{
-        transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);   
+    100% {
+        transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);
     }
 }
 
-.info-box{
+@keyframes pick-card-animation-mobile {
+    0% {
+        transform: scale(1.1);
+    }
+    40% {
+        transform: scale(1.7);
+    }
+    60% {
+        transform: scale(1.7);
+    }
+    100% {
+        transform: scale(1) translateX(110px) translateY(-280px) rotate(-20deg);
+    }
+}
+
+.info-box {
     position: absolute;
     right: 170px;
     left: 100px;
     bottom: 32px;
+
+    @media (max-width: 700px) {
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media(max-width: 800px){
+    .hide-large{
+        display: none;
+    }
+}
+
+@media(min-width: 800px){
+    .hide-mobile{
+        display: none;
+    }
+}
+
+.mobile-players{
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 120px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }

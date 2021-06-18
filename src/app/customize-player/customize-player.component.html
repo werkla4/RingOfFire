@@ -1,0 +1,13 @@
+<div class="dialog">
+    <h1 mat-dialog-title>Choose your favorite picture:</h1>
+
+    <div class="picture-container">
+        <img src="../../assets/img/profile/{{ picPaths[i] }}" *ngFor="let picPath of picPaths; let i = index;" (click)="setPicId(i)" [class.selected]="picId == i">
+    </div>
+    
+    <div mat-dialog-actions>
+      <button mat-button [disabled]="picId==-1" [mat-dialog-close]="picPaths[picId]">Set new picture</button>
+      <button mat-button color="warn" [mat-dialog-close]="'deletePlayer'">Delete player</button> 
+    </div>
+</div>
+

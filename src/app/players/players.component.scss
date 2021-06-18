@@ -1,23 +1,26 @@
-.player-container{
+.player-container {
     display: flex;
     align-items: center;
-    z-index: 1;    
+    z-index: 1;
     background-color: rgba(81, 72, 68, 0.5);
     width: 300px;
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
 
-    span{
-        font-size: 30px;
+    span {
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        font: 400 25px/30px Roboto, "Helvetica Neue", sans-serif;
     }
 
-    img{
+    img {
         height: 50px;
-        width: auto;
+        width: 50px;
+        object-fit: contain;
         margin: 10px;
     }
 }
 
-.player-active{
+.player-active {
     background-color: rgb(245, 122, 77, 0.7) !important;
 }
