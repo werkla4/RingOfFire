@@ -87,8 +87,8 @@
     transform: scale(1) translateX(220px) translateY(-200px) rotate(-10deg);
 
     @media (max-width: 1000px) {
-        animation: pick-card-animation-mobile 1s ease-in-out !important;
-        transform: scale(1) translateX(110px) translateY(-280px) rotate(-20deg) !important;
+        animation: pick-card-animation-mobile 1s ease-in-out ;
+        transform: scale(1) translateX(110px) translateY(-280px) rotate(-20deg) ;
     }
 }
 
